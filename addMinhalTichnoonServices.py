@@ -12,7 +12,8 @@ services=['compilation_tmm_darom', 'compilation_tmm_haifa', 'compilation_tmm_mer
 
 for s in services:
     QgsSettings().setValue('qgis/connections-arcgisfeatureserver/{}/url'.format(s), 'https://ags.iplan.gov.il/arcgisiplan/rest/services/PlanningPublic/{}/MapServer/'.format(s))
-    iface.reloadConnections()
+    
+iface.reloadConnections()
 
 
 
